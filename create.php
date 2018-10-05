@@ -17,14 +17,21 @@
 		}
 
 		// sql to create table
-		$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-			VALUES ('Regis', 'Perez', 'regisbatistaperez@gmail.com')";
+		$sql = "CREATE TABLE users (
+		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		firstname VARCHAR(30) NOT NULL,
+		lastname VARCHAR(30) NOT NULL,
+		email VARCHAR(50),
+		reg_date TIMESTAMP
+		)";
 
 		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
+			echo "Table users created successfully";
 		} else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
+			echo "Error creating table: " . $conn->error;
 		}
+
+		$conn->close();
 
 	?>
 </body>
