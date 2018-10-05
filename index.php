@@ -17,7 +17,7 @@
 		}
 
 		// sql to create table
-		$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+		$sql = "INSERT INTO users (firstname, lastname, email)
 			VALUES ('Regis', 'Perez', 'regisbatistaperez@gmail.com')";
 
 		if ($conn->query($sql) === TRUE) {
