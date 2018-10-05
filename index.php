@@ -17,11 +17,10 @@
 		}
 
 		// sql to create table
-		$sql = "INSERT INTO users (firstname, lastname, email)
-			VALUES ('Regis', 'Perez', 'regisbatistaperez@gmail.com')";
+		$sql = "DROP TABLE users";
 
 		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
+			echo "Table deleted successfully";
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
